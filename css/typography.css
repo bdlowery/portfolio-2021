@@ -1,0 +1,142 @@
+@font-face {
+  font-family: "Marvin Visions Big Bold";
+  src: local("Marvin Visions Big Bold"), local("Marvin-Visions-Big-Bold"),
+    local("MarvinVisionsBig-Bold"), url(/fonts/MarvinVisionsBig-Bold.woff2);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Helvetica Neue";
+  src: local("HelveticaNeue"), local("Helvetica-Neue"), local("HelveticaNeue-Regular"),
+    url(/fonts/HelveticaNeue.woff2);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Helvetica Neue Bold";
+  src: local("HelveticaNeueBold"), local("Helvetica-Neue-Bold"), local("HelveticaNeue-Bold"),
+    url(/fonts/HelveticaNeue-Bold.woff2);
+  font-weight: 700;
+}
+
+.title-voice {
+  font-family: "Marvin Visions Big Bold", Helvetica, sans-serif;
+  font-size: clamp(50px, calc(1rem + 10vw), 60px);
+  line-height: 1.2;
+  letter-spacing: 0.025em;
+  font-weight: 700;
+}
+
+.loud-voice {
+  font-family: "Marvin Visions Big Bold", Helvetica, sans-serif;
+  font-size: 48px;
+  line-height: 1.2;
+  letter-spacing: 0.025em;
+  font-weight: 700;
+  color: var(--primary-darker);
+}
+
+.strong-voice {
+  font-family: "Helvetica Neue Bold", Helvetica, sans-serif;
+  font-size: 30px;
+  line-height: 1.2;
+
+  font-weight: 700;
+  color: var(--primary-darker);
+}
+
+.attention-voice {
+  font-family: "Helvetica Neue Bold", Helvetica, sans-serif;
+  font-size: 24px;
+  line-height: 1.2;
+
+  font-weight: 700;
+  max-width: 30ch;
+  color: var(--black);
+}
+
+.stern-voice {
+  font-family: "Helvetica Neue Bold", Helvetica, sans-serif;
+  font-size: 20px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--primary-darker);
+}
+
+.quiet-voice {
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 1.2;
+
+  font-weight: 400;
+}
+
+.micro-voice {
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 11px;
+  line-height: 1.2;
+  text-transform: capitalize;
+  font-weight: 400;
+}
+
+.description-voice {
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 15px;
+  line-height: 1.2;
+
+  font-weight: 400;
+}
+
+p,
+ul,
+.regular-voice {
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 17px;
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--black);
+}
+
+a {
+  font-family: "Helvetica Neue Bold", Helvetica, sans-serif;
+  font-size: 17px;
+  text-underline-offset: 1px;
+  font-weight: 700;
+}
+
+nav a {
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--black);
+}
+
+.writing-text .regular-voice {
+  max-width: 40ch;
+  color: #33383b;
+}
+
+.writing-text .quiet-voice {
+  color: var(--primary-neutral-dark);
+  line-height: 1.5;
+}
+
+.writing-text .description-voice {
+  max-width: 40ch;
+  color: var(--primary-neutral-darker);
+  line-height: 1.5;
+}
+
+.writing-card-link .read-more {
+  font-family: "Helvetica Neue Bold";
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #33383b;
+  line-height: 1.5;
+  display: block;
+}
+
+.page-header .loud-voice {
+  max-width: 30ch;
+}

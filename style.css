@@ -1,0 +1,422 @@
+/*
+Theme Name: Portfolio 2021
+Author: @bdlowery
+Author URI: https://bdlowery.dev
+Description: Theme for my Portfolio.
+Version: 0.1
+Requires at least: 5.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: portfolio2021
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+@import "css/meyer-reset.css";
+@import "css/setup.css";
+@import "css/typography.css";
+@import "css/structure.css";
+
+/* old site styles */
+:root {
+  --white: #ffffff;
+  --white-transparent: hsla(0, 0%, 100%, 0.2);
+  --black: #000000;
+  --black-transparent: hsla(0, 0%, 0%, 0.2);
+  --box-shadow: var(--black-transparent);
+  --primary: #279cde;
+  --primary-light: #6bb7e3;
+  --primary-dark: #1f77ab;
+  --primary-darker: #0f425e;
+  --accent: #d57b02;
+  --accent-light: #ffa32c;
+  --accent-dark: #b86801;
+  --accent-darker: #6f3f01;
+  --primary-neutral-lightest: #eef4f8;
+  --primary-neutral-lighter: #e2eaf0;
+  --primary-neutral-light: #a2a8ac;
+  --primary-neutral: #7a848a;
+  --primary-neutral-dark: #5f666a;
+  --primary-neutral-darker: #33383b;
+  --accent-neutral-light: #a0968b;
+  --accent-neutral: #776d61;
+  --accent-neutral-dark: #655d53;
+  --accent-neutral-darker: #3d3832;
+}
+/* .about-me-landing {
+background: linear-gradient(145deg, rgba(0, 16, 153, 0.2) 0, rgba(58, 217, 255, 0.2) 96%);
+}
+body {
+background: black;
+} */
+/* $todo 
+Temporary color styles to try and show heierarchy.
+These will be css variables eventually */
+body {
+  background-color: var(--white);
+}
+.project-card p {
+  color: var(--primary-neutral-dark);
+}
+.project-card .description-voice {
+  color: var(--primary-neutral-darker);
+}
+.masthead .logo {
+  max-width: 70px;
+}
+ul {
+  list-style-type: square;
+  padding-inline-start: 20px;
+  line-height: 1.5;
+}
+ul li {
+  margin-top: 5px;
+}
+.site-menu .active {
+  background-color: var(--primary-neutral-light);
+}
+.site-menu .site-link span {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: left bottom 0px;
+  background-repeat: no-repeat;
+  background-size: 0% 1px;
+  transition: 0.25s ease-in-out;
+}
+.site-menu .site-link:hover span {
+  background-size: 100% 1px;
+  transition: 0.25s ease-in-out;
+}
+.education {
+  position: relative;
+  z-index: 1;
+}
+.about-me-landing {
+  overflow: hidden;
+}
+.field + .field {
+  margin-top: 20px;
+}
+.field + .submit-button {
+  margin-top: 20px;
+}
+.field :is(label, input) {
+  display: block;
+}
+.project-card picture {
+  max-width: 240px;
+}
+.inner-column p {
+  max-width: 60ch;
+}
+.masthead {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0px;
+  gap: 10px;
+}
+.site-menu {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.site-menu .site-link {
+  padding: 10px;
+  text-decoration: none;
+}
+ul li {
+  max-width: 35ch;
+}
+.extra-information {
+  display: flex;
+  flex-direction: column;
+}
+.projects {
+  background-color: var(--primary-neutral-lighter);
+}
+.project-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.my-work-project-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.project-card {
+  width: 100%;
+}
+/* $todo -- add a hover effect on the card when user hovers. Shows clickability. */
+.project-picture {
+  height: 0;
+  padding-bottom: 60%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: 0.25s ease-in-out;
+}
+.project-card-link {
+  display: inline-block;
+}
+.writing-card-link .attention-voice span,
+.read-more span {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: left bottom 0px;
+  background-repeat: no-repeat;
+  background-size: 0% 1px;
+  transition: 0.25s ease-in-out;
+}
+.writing-card-link:hover .attention-voice span,
+.writing-card-link:hover .read-more span {
+  background-size: 100% 1px;
+  transition: 0.25s ease-in-out;
+}
+.project-card-link:hover .project-picture {
+  transform: scale(1.03);
+  transition: 0.25s ease-in-out;
+}
+.project-card-link:hover .project-card .project-card-text .project-picture {
+  transform: scale(1.03);
+  transition: 0.25s ease-in-out;
+}
+.project-card .stern-voice span {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: left bottom 0px;
+  background-repeat: no-repeat;
+  background-size: 0% 1px;
+  transition: 0.25s ease-in-out;
+}
+.project-card-link:hover .stern-voice span {
+  background-size: 100% 1px;
+  transition: 0.25s ease-in-out;
+}
+/* $note -- might not need, depends on how deep flex parent / child is */
+/* .project-card {
+width: 100%;
+} */
+.project-card p {
+  max-width: 30ch;
+}
+.writing-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(289px, 1fr));
+  grid-gap: 50px;
+}
+.writing-card-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+}
+.action-link {
+  text-decoration: underline;
+  color: var(--black);
+}
+.page-header {
+  background-image: url(../images/stars-background.png);
+  background-size: cover;
+  background-position: center;
+  background-color: var(--black);
+  color: var(--white);
+  /*color: #e2e2e2;*/
+}
+.page-header p {
+  color: var(--white);
+}
+.page-header .loud-voice {
+  color: var(--white);
+}
+.my-work-cards {
+  display: flex;
+  flex-direction: column;
+}
+footer {
+  background-color: var(--primary-neutral-lighter);
+}
+.site-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 15px;
+}
+.footer-text h3 + p {
+  margin-top: 15px;
+}
+.footer-links a {
+  text-decoration: underline;
+  line-height: 1.5;
+}
+.footer-links a:hover {
+  background-color: var(--black);
+  color: var(--white);
+  transition: 0.15s ease-in-out;
+  text-decoration: none;
+}
+.footer-links-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 15px;
+}
+.footer-links {
+  display: flex;
+  margin-left: auto;
+  gap: 15px;
+}
+@media (min-width: 620px) {
+  .masthead {
+    flex-direction: row;
+  }
+  .education::after {
+    content: "";
+    position: absolute;
+    width: 115%;
+    height: 190%;
+    background-color: var(--primary-neutral-lightest);
+    top: -20px;
+    left: -20px;
+    z-index: -1;
+  }
+  .extra-information {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .project-cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .my-work-cards {
+    flex-direction: row;
+  }
+  .what-i-want + .education {
+    margin-top: 0px;
+    margin-left: 30px;
+  }
+  .site-footer {
+    flex-direction: row;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --box-shadow: var(--white-transparent);
+  }
+  body {
+    background-color: var(--black);
+  }
+  .site-header {
+    background-color: var(--primary-neutral-darker);
+  }
+  footer {
+    background-color: var(--primary-neutral-darker);
+  }
+  nav a {
+    color: var(--white);
+  }
+  .site-menu .active {
+    background-color: var(--primary-neutral-dark);
+  }
+  .projects {
+    background-color: var(--primary-neutral-darker);
+  }
+  .regular-voice,
+  p,
+  ul,
+  .attention-voice {
+    color: var(--white);
+  }
+  .education::after {
+    background-color: var(--primary-neutral-dark);
+  }
+  .loud-voice,
+  .stern-voice,
+  .strong-voice {
+    color: var(--primary);
+  }
+  .page-header .loud-voice {
+    color: var(--white);
+  }
+  .project-card p {
+    color: var(--primary-neutral-light);
+  }
+  .writing-text .quiet-voice {
+    color: var(--primary-neutral-light);
+  }
+  .writing-text .description-voice {
+    color: var(--primary-neutral-lighter);
+  }
+  .writing-text + .quiet-voice {
+    color: var(--white);
+  }
+  .logo svg text {
+    fill: var(--white);
+  }
+  .action-link {
+    color: var(--white);
+  }
+  .project-card .description-voice {
+    color: var(--primary-neutral-lighter);
+  }
+}
+/* dark mode toggle */
+@media (min-width: 0px) {
+  :root.dark-theme {
+    --box-shadow: var(--white-transparent);
+  }
+  body.dark-theme {
+    background-color: var(--black);
+  }
+  .dark-theme .site-header {
+    background-color: var(--primary-neutral-darker);
+  }
+  .dark-theme footer {
+    background-color: var(--primary-neutral-darker);
+  }
+  .dark-theme nav a {
+    color: var(--white);
+  }
+  .dark-theme .site-menu .active {
+    background-color: var(--primary-neutral-dark);
+  }
+  .dark-theme .projects {
+    background-color: var(--primary-neutral-darker);
+  }
+  .dark-theme .regular-voice,
+  .dark-theme p,
+  .dark-theme ul,
+  .dark-theme .attention-voice {
+    color: var(--white);
+  }
+  .dark-theme .education::after {
+    background-color: var(--primary-neutral-dark);
+  }
+  .dark-theme .loud-voice,
+  .dark-theme .stern-voice,
+  .dark-theme .strong-voice {
+    color: var(--primary);
+  }
+  .dark-theme .page-header .loud-voice {
+    color: var(--white);
+  }
+  .dark-theme .project-card p {
+    color: var(--primary-neutral-light);
+  }
+  .dark-theme .writing-text .quiet-voice {
+    color: var(--primary-neutral-light);
+  }
+  .dark-theme .writing-text .description-voice {
+    color: var(--primary-neutral-lighter);
+  }
+  .dark-theme .writing-text + .quiet-voice {
+    color: var(--white);
+  }
+  .dark-theme .logo svg text {
+    fill: var(--white);
+  }
+  .dark-theme .action-link {
+    color: var(--white);
+  }
+  .dark-theme .project-card .description-voice {
+    color: var(--primary-neutral-lighter);
+  }
+}

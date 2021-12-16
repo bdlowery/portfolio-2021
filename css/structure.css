@@ -1,0 +1,121 @@
+section {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+footer {
+  padding: 40px 0;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  background-color: var(--white);
+  box-shadow: 0 4px 6px 0 var(--box-shadow);
+  z-index: 10;
+}
+
+.page-header {
+  padding: 40px 0px;
+}
+
+.inner-column {
+  max-width: 900px;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.site-content {
+  flex: 1;
+}
+
+.who-i-am + .extra-information {
+  margin-top: 60px;
+}
+
+.attention-voice + ul {
+  margin-top: 10px;
+}
+
+.loud-voice + p {
+  margin-top: 5px;
+}
+
+.strong-voice + p {
+  margin-top: 5px;
+}
+
+.what-i-want + .education {
+  margin-top: 30px;
+}
+
+/* $todo -- remove this when proper landing eye-catching-thing is added */
+.about-me-landing {
+  padding-top: 150px;
+}
+
+.projects-intro + .project-cards {
+  margin-top: 50px;
+}
+
+.project-card picture + .stern-voice {
+  margin-top: 8px;
+}
+
+.project-cards + .action-link {
+  margin-top: 50px;
+}
+
+.project-card .stern-voice + .quiet-voice {
+  margin-top: 5px;
+}
+
+.project-card .quiet-voice + .description-voice {
+  margin-top: 10px;
+}
+
+.project-card-text + .project-card-link {
+  margin-top: 10px;
+}
+
+.writing-text .attention-voice + .description-voice {
+  margin-top: 15px;
+}
+
+.writing-text + .quiet-voice {
+  margin-top: 15px;
+}
+
+.writing-intro + .writing-cards {
+  margin-top: 50px;
+}
+
+.writing-text .quiet-voice + .attention-voice {
+  margin-top: 5px;
+}
+
+.writing-text + .quiet-voice {
+  font-family: "Helvetica Neue Bold";
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.writing-cards + .action-link {
+  margin-top: 50px;
+}
+
+p + p {
+  margin-top: 20px;
+}
+
+.quiet-voice + .micro-voice {
+  margin-top: 0px;
+}
