@@ -14,11 +14,13 @@
   <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class("site"); ?>>
   <header class="site-header">
     <div class="inner-column">
-      <h1>BDL</h1>
-      <?php include("templates/components/site-menu.php") ?>
+      <div class="masthead">
+        <h1>BDL</h1>
+        <?php include("templates/components/site-menu.php") ?>
+      </div>
     </div>
   </header>
   <main class="site-content">
