@@ -17,6 +17,10 @@ if (is_singular("project")) {
   include("templates/pages/project-detail.php");
 }
 
+if (is_singular("post")) {
+  include("templates/pages/writing-detail.php");
+}
+
 if (is_404()) {
   include("templates/pages/page-not-found.php");
 }
