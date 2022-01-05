@@ -11,6 +11,10 @@ if (is_page("my-work")) {
   include("templates/pages/my-work.php");
 }
 
+if (is_page("sign-in")) {
+  include("templates/pages/sign-in.php");
+}
+
 //project detail page....
 //$todo "projects" seems problematic for a single page.
 if (is_singular("project")) {
