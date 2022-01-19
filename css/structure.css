@@ -57,8 +57,13 @@ footer {
 }
 
 /* $todo -- remove this when proper landing eye-catching-thing is added */
-.about-me-landing {
-  padding-top: 150px;
+.intro {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.intro + .about-me-landing {
+  padding-top: 0;
 }
 
 .projects-intro + .project-cards {
@@ -118,4 +123,12 @@ p + p {
 
 .quiet-voice + .micro-voice {
   margin-top: 0px;
+}
+
+.tools + .description-voice {
+  margin-top: 5px;
+}
+
+.stern-voice + .tools {
+  margin-top: 2px;
 }
