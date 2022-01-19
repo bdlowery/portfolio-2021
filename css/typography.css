@@ -99,10 +99,10 @@ ul,
 }
 
 a {
-  font-family: "Helvetica Neue Bold", Helvetica, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
   font-size: 17px;
   text-underline-offset: 1px;
-  font-weight: 700;
+  font-weight: 400;
 }
 
 nav a {
@@ -123,7 +123,7 @@ nav a {
 }
 
 .writing-text .description-voice {
-  max-width: 40ch;
+  max-width: 44ch;
   color: var(--primary-neutral-darker);
   line-height: 1.5;
 }
@@ -139,4 +139,16 @@ nav a {
 
 .page-header .loud-voice {
   max-width: 30ch;
+}
+
+/* Article typography */
+
+article h2 {
+  font-family: "Marvin Visions Big Bold", Helvetica, sans-serif;
+  font-size: 35px;
+  line-height: 1.2;
+
+  font-weight: 700;
+  color: var(--primary-darker);
+  letter-spacing: 0.025em;
 }
