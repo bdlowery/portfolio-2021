@@ -10,15 +10,29 @@ if ($projectImage) {
 }
 ?>
 
-<header class="page-header">
-  <div class="inner-column">
-    <h1 class="title-voice"><?= $name ?></h1>
-    <p><?= $description ?></p>
-  </div>
-</header>
+<article>
+  <header class="page-header">
+    <div class="inner-column">
+      <?php echo get_hansel_and_gretel_breadcrumbs() ?>
+      <h1 class="title-voice"><?= $name ?></h1>
+      <p class="regular-voice"><?= $description ?></p>
 
-<section class="page-section">
-  <div class="inner-column">
-    <h1><?php the_field("name"); ?></h1>
-  </div>
-</section>
+      <?php
+      $user = wp_get_current_user();
+      if (in_array('administrator', (array) $user->roles) || in_array('editor', (array) $user->roles)) {
+        edit_post_link(__('Edit Post'));
+      }
+
+      ?>
+    </div>
+  </header>
+
+
+  <section class="post">
+
+    <?php
+    include(getFile("module-loop.php"));
+    ?>
+  </section>
+
+</article>
