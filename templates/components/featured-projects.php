@@ -1,4 +1,9 @@
 <?php
+
+// ***
+// *** INLCUDED IN project-home.php
+// ***
+
 $name = get_field("name", $featuredCard);
 $projectImage = get_field("project_image", $featuredCard);
 $description = get_field("description", $featuredCard);
@@ -21,18 +26,16 @@ if ($projectImage) {
     <picture class="project-picture" style="background-image: url(<?= $projectImage ?>)">
     </picture>
     <h2 class="stern-voice"><span><?= $name ?></span></h2>
+    <?php
+    $terms = get_the_terms($featuredCard->ID, 'tool');
+    ?>
+    <div class="tools">
+      <?php foreach ($terms as $term) { ?>
 
-    <?php if ($toolsUsed) { ?>
-      <div class="test-flex">
-        <?php foreach ($toolsUsed as $tool) {
-          echo "hello"; ?>
+        <span class="quiet-voice"><?= $term->name; ?></span>
 
-          <span class="quiet-voice"><?= esc_html($tool->name); ?></span>
-        <?php } ?>
-      </div>
-
-
-    <?php } ?>
+      <?php } ?>
+    </div>
     <p class="description-voice"><?= $description ?></p>
   </div>
 </a>
