@@ -5,8 +5,8 @@ $featuredDescription = get_field("section_description");
 ?>
 
 <div class="projects-intro">
-  <h1 class="loud-voice"><?= $featuredTitle ?></h2>
-    <p><?= $featuredDescription ?></p>
+  <h2 class="loud-voice"><?= $featuredTitle ?></h2>
+  <p><?= $featuredDescription ?></p>
 </div>
 <div class="project-cards">
   <?php
