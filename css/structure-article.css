@@ -1,0 +1,44 @@
+/* article .text-module + .text-module {
+  margin-top: 80px;
+}
+
+article .text-module + .goal-module {
+  margin-top: 40px;
+}
+
+article .goal-module + .picture-module {
+  margin-top: 40px;
+} */
+
+article section section + section {
+  margin-top: 80px;
+}
+
+article .text-module .text-content h2 + p {
+  margin-top: 15px;
+}
+article .text-module .text-content p + h2 {
+  margin-top: 15px;
+}
+
+article .picture-module .inner-column h2 + picture {
+  margin-top: 15px;
+}
+
+article .picture-module .inner-column picture + p,
+article .figure-module .inner-column figure picture + figcaption,
+article .figure-module .inner-column h2 + figure {
+  margin-top: 15px;
+}
+
+article .list-module .inner-column h2 + p {
+  margin-top: 15px;
+}
+
+article .list-module .inner-column p + ul {
+  margin-top: 15px;
+}
+
+article p + p {
+  margin-top: 15px;
+}
