@@ -1,4 +1,9 @@
 <?php
+
+// ***
+// *** INLCUDED IN project-section.php
+// ***
+
 //only get the field associated with the correct card ID.
 $name = get_field("name", $card->ID);
 $projectImage = get_field("project_image", $card->ID);
@@ -23,17 +28,16 @@ if ($projectImage) {
     </picture>
     <h2 class="stern-voice"><span><?= $name ?></span></h2>
 
-    <?php if ($toolsUsed) { ?>
-      <div class="test-flex">
-        <?php foreach ($toolsUsed as $tool) {
-          echo "hello"; ?>
+    <?php
+    $terms = get_the_terms($card->ID, 'tool');
+    ?>
+    <div class="tools">
+      <?php foreach ($terms as $term) { ?>
 
-          <span class="quiet-voice"><?= esc_html($tool->name); ?></span>
-        <?php } ?>
-      </div>
+        <span class="quiet-voice"><?= $term->name; ?></span>
 
-
-    <?php } ?>
+      <?php } ?>
+    </div>
     <p class="description-voice"><?= $description ?></p>
   </div>
 </a>
