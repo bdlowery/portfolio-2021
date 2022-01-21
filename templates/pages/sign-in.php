@@ -7,24 +7,21 @@
 
 <section class="page-section sign-in-form">
   <div class="inner-column">
-
-    <?php
-    if (!is_user_logged_in()) { // Display WordPress login form:
+    <div class="login-form">
+      <?php
+      // Display WordPress login form:
       $parameters = array(
         'redirect' => admin_url(),
         'form_id' => 'loginform',
-        'label_username' => __('Username or email'),
+        'label_username' => __('Username or Email Address'),
         'label_password' => __('Password'),
         'label_remember' => __('Remember Me'),
         'label_log_in' => __('Sign in'),
-        'remember' => true
+        'remember' => true,
+        "value_remember" => true,
       );
       wp_login_form($parameters);
-    } else { // If logged in:
-      wp_loginout(home_url()); // Display "Log Out" link.
-      echo " | ";
-      wp_register('', ''); // Display "Site Admin" link.
-    }
-    ?>
+      ?>
+    </div>
   </div>
 </section>
