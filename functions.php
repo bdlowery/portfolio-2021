@@ -66,7 +66,7 @@ function theme_gsap_script()
 }
 add_action('wp_enqueue_scripts', 'theme_gsap_script');
 
-
+//https://wordpress.stackexchange.com/questions/204738/breadcrumbs-with-custom-post-type-without-plugin?newreg=c834d05046f2450486d67630a4067495
 function get_hansel_and_gretel_breadcrumbs()
 {
   // Set variables for later use
