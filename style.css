@@ -15,6 +15,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 @import "css/setup.css";
 @import "css/typography.css";
 @import "css/structure.css";
+@import "css/structure-article.css";
 
 /* old site styles */
 :root {
@@ -49,64 +50,105 @@ body {
 background: black;
 } */
 /* $todo 
+
 Temporary color styles to try and show heierarchy.
 These will be css variables eventually */
 body {
   background-color: var(--white);
 }
-.project-card p {
+
+.tools p {
   color: var(--primary-neutral-dark);
 }
+
 .project-card .description-voice {
   color: var(--primary-neutral-darker);
 }
+
 .masthead .logo {
   max-width: 70px;
 }
+
 ul {
   list-style-type: square;
   padding-inline-start: 20px;
   line-height: 1.5;
 }
-ul li {
+
+ul li + li {
   margin-top: 5px;
 }
+
 .site-menu .active {
   background-color: var(--primary-neutral-light);
 }
+
 .site-menu .site-link span {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: left bottom 0px;
+  background-repeat: no-repeat;
+  padding-bottom: 2px;
+  background-size: 0% 1px;
+  transition: 0.25s ease-in-out;
+}
+
+.site-menu .site-link:hover span {
+  background-size: 100% 1px;
+  transition: 0.25s ease-in-out;
+}
+
+.site-link span {
   background-image: linear-gradient(currentColor, currentColor);
   background-position: left bottom 0px;
   background-repeat: no-repeat;
   background-size: 0% 1px;
   transition: 0.25s ease-in-out;
 }
-.site-menu .site-link:hover span {
+
+.site-link:hover span {
   background-size: 100% 1px;
   transition: 0.25s ease-in-out;
 }
+
+.intro picture {
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.what-i-want a {
+  display: inline-block;
+}
+
 .education {
   position: relative;
   z-index: 1;
 }
+
 .about-me-landing {
   overflow: hidden;
 }
+
 .field + .field {
   margin-top: 20px;
 }
+
 .field + .submit-button {
   margin-top: 20px;
 }
+
 .field :is(label, input) {
   display: block;
 }
+
 .project-card picture {
   max-width: 240px;
 }
+
 .inner-column p {
   max-width: 60ch;
 }
+
 .masthead {
   display: flex;
   flex-direction: column;
@@ -120,33 +162,41 @@ ul li {
   gap: 10px;
   flex-wrap: wrap;
 }
+
 .site-menu .site-link {
   padding: 10px;
   text-decoration: none;
 }
+
 ul li {
   max-width: 35ch;
 }
+
 .extra-information {
   display: flex;
   flex-direction: column;
 }
+
 .projects {
   background-color: var(--primary-neutral-lighter);
 }
+
 .project-cards {
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
+
 .my-work-project-card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
+
 .project-card {
   width: 100%;
 }
+
 /* $todo -- add a hover effect on the card when user hovers. Shows clickability. */
 .project-picture {
   height: 0;
@@ -156,6 +206,7 @@ ul li {
   background-repeat: no-repeat;
   transition: 0.25s ease-in-out;
 }
+
 .project-card-link {
   display: inline-block;
 }
@@ -163,106 +214,231 @@ ul li {
 .writing-card-link .attention-voice span {
   background-image: linear-gradient(currentColor, currentColor);
   background-position: left bottom 0px;
+  padding-bottom: 3px;
   background-repeat: no-repeat;
-  background-size: 0% 1px;
+  background-size: 0% 2px;
   transition: 0.25s ease-in-out;
 }
+
 .writing-card-link:hover .attention-voice span {
-  background-size: 100% 1px;
+  background-size: 100% 2px;
   transition: 0.25s ease-in-out;
 }
+
 .project-card-link:hover .project-picture {
   transform: scale(1.03);
   transition: 0.25s ease-in-out;
 }
+
 .project-card-link:hover .project-card .project-card-text .project-picture {
   transform: scale(1.03);
   transition: 0.25s ease-in-out;
 }
+
 .project-card .stern-voice span {
   background-image: linear-gradient(currentColor, currentColor);
   background-position: left bottom 0px;
+  padding-bottom: 1px;
   background-repeat: no-repeat;
-  background-size: 0% 1px;
+  background-size: 0% 2px;
   transition: 0.25s ease-in-out;
 }
+
 .project-card-link:hover .stern-voice span {
-  background-size: 100% 1px;
+  background-size: 100% 2px;
   transition: 0.25s ease-in-out;
 }
+
 /* $note -- might not need, depends on how deep flex parent / child is */
 /* .project-card {
 width: 100%;
 } */
+
 .project-card p {
   max-width: 30ch;
 }
+
 .writing-cards {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(289px, 1fr));
   grid-gap: 50px;
 }
+
 .writing-card-link {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
 }
+
 .action-link {
   text-decoration: underline;
   color: var(--black);
 }
+
 .page-header {
-  background-image: url(../images/stars-background.png);
+  background-image: url(images/stars-background.png);
   background-size: cover;
   background-position: center;
   background-color: var(--black);
   color: var(--white);
   /*color: #e2e2e2;*/
 }
+
 .page-header p {
   color: var(--white);
 }
+
 .page-header .loud-voice {
   color: var(--white);
 }
+
 .my-work-cards {
   display: flex;
   flex-direction: column;
 }
+
 footer {
   background-color: var(--primary-neutral-lighter);
 }
+
 .site-footer {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 15px;
 }
+
 .footer-text h3 + p {
   margin-top: 15px;
 }
-.footer-links a {
+
+.footer-links a,
+.what-i-want a {
   text-decoration: underline;
   line-height: 1.5;
 }
-.footer-links a:hover {
+
+.footer-links a:hover,
+.what-i-want a:hover {
   background-color: var(--black);
   color: var(--white);
   transition: 0.15s ease-in-out;
   text-decoration: none;
 }
+
 .footer-links-group {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 15px;
 }
+
 .footer-links {
   display: flex;
   margin-left: auto;
   gap: 15px;
 }
+
+/* POST STYLES */
+.regular-voice + .post-edit-link {
+  margin-top: 20px;
+}
+
+.post-edit-link {
+  margin-left: -10px;
+
+  padding: 10px;
+  display: inline-block;
+  color: var(--white);
+}
+
+.post-edit-link:hover {
+  color: var(--black);
+  background-color: var(--white);
+}
+
+/* USER PROFILE STYLES */
+
+.strong-voice + .user-card {
+  margin-top: 20px;
+}
+
+.user-card {
+  border: 1px solid var(--primary-neutral-lighter);
+  padding: 20px;
+  max-width: 350px;
+  box-shadow: 0 4px 6px 0 hsl(0deg 0% 0% / 20%);
+}
+
+.user-card ul {
+  list-style-type: none;
+  padding-inline-start: 0px;
+}
+
+.user-card ul li {
+  max-width: 64ch;
+}
+
+.avatar {
+  max-width: 96px;
+}
+
+.tools span {
+  color: var(--primary-neutral-dark);
+}
+
+.tools span::after {
+  content: ",";
+}
+.tools span:last-of-type::after {
+  display: none;
+}
+
+/* Article Styles */
+
+article section {
+  padding: 0px;
+}
+
+article section.post {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+article picture {
+  max-width: 650px;
+}
+
+article .inner-column p {
+  max-width: 68ch;
+}
+
+article section h2 {
+  max-width: 35ch;
+}
+
+article p + h2 {
+}
+
+.breadcrumb a {
+  display: inline-block;
+}
+
+.breadcrumb .current {
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 17px;
+  text-underline-offset: 1px;
+  font-weight: 400;
+}
+
+.breadcrumb .delimeter {
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 17px;
+  text-underline-offset: 1px;
+  font-weight: 400;
+}
+
 @media (min-width: 620px) {
   .masthead {
     flex-direction: row;
@@ -335,7 +511,7 @@ footer {
   .page-header .loud-voice {
     color: var(--white);
   }
-  .project-card p {
+  .tools span {
     color: var(--primary-neutral-light);
   }
   .writing-text .quiet-voice {
@@ -397,7 +573,7 @@ footer {
   .dark-theme .page-header .loud-voice {
     color: var(--white);
   }
-  .dark-theme .project-card p {
+  .dark-theme .tools span {
     color: var(--primary-neutral-light);
   }
   .dark-theme .writing-text .quiet-voice {
