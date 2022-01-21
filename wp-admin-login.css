@@ -1,0 +1,57 @@
+body.login {
+  background-color: #e2eaf0;
+  background-image: url(https://peprojects.dev/alpha-2/bdlowery/noise-bg.webp);
+}
+
+body.login div#login form#loginform {
+  box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
+}
+
+body.login div#login form#loginform p.submit input#wp-submit {
+  background-color: #000000;
+  border: 1px solid transparent;
+}
+
+body.login div#login form#loginform p.submit input#wp-submit:hover {
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid #000000;
+}
+
+body.login div#login h1 a {
+  background-image: url("images/bdl.svg");
+}
+
+body.login div#login form#loginform p label {
+  color: #000000;
+}
+body.login div#login form#loginform input {
+  border: 1px solid #000000;
+}
+
+body.login div#login form#loginform .user-pass-wrap label {
+  color: #000000;
+}
+
+body.login div#login form#loginform p.forgetmenot input#rememberme {
+  border: 1px solid #000000;
+}
+
+.login h1 a {
+  background-size: 150px 150px;
+  background-position: center top;
+  background-repeat: no-repeat;
+  color: #999;
+  height: 150px;
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 1.3em;
+  margin: 0 auto 0px;
+  padding: 0;
+  text-decoration: none;
+  width: 150px;
+  text-indent: -9999px;
+  outline: none;
+  overflow: hidden;
+  display: block;
+}
