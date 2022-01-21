@@ -7,10 +7,17 @@ $date = get_the_date();
 $dateNumbersOnly = get_the_date("Y-m-d")
 
 ?>
+<article>
+  <header class="page-header">
+    <div class="inner-column">
+      <h1 class="loud-voice"><?= $title ?></h1>
+      <p><em><?= $description ?></em></p>
+    </div>
+  </header>
 
-<header class="page-header">
-  <div class="inner-column">
-    <h1 class="loud-voice"><?= $title ?></h1>
-    <p><?= $description ?></p>
-  </div>
-</header>
+  <section class="post">
+    <?php
+    include(getFile("module-loop.php"));
+    ?>
+  </section>
+</article>
